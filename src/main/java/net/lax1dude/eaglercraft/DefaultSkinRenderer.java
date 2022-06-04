@@ -45,7 +45,7 @@ public class DefaultSkinRenderer {
 			new TextureLocation("/mob/enderman.png"),
 			new TextureLocation("/mob/skeleton.png"),
 			new TextureLocation("/mob/fire.png"),
-			//new TextureLocation("/skins/20.barney.png"),
+			new TextureLocation("/skins/20.barney.png"),
 			new TextureLocation("/skins/21.slime.png"),
 			new TextureLocation("/skins/22.noob.png"),
 			new TextureLocation("/skins/23.trump.png"),
