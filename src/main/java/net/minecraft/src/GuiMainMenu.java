@@ -73,12 +73,12 @@ public class GuiMainMenu extends GuiScreen {
 		 * RunnableTitleScreen(this), "1.6 Update Check Thread")).start(); }
 		 */
 
-		this.field_92025_p = EaglerAdapter._wisWebGL() ? ("eaglercraft javascript runtime") : ("eaglercraft desktop runtime");
+		this.field_92025_p = EaglerAdapter._wisWebGL() ? ("REBLOCKED Minecraft For VPS") : ("eaglercraft desktop runtime");
 		this.start = System.currentTimeMillis() + System.currentTimeMillis() % 10000l;
 		this.ackLines = new ArrayList();
 		
 		if(!LocalStorageManager.gameSettingsStorage.getBoolean("seenAcknowledgements")) {
-			this.showAck = true;
+			//this.showAck = true;
 		}
 	}
 
@@ -137,7 +137,7 @@ public class GuiMainMenu extends GuiScreen {
 
 		//GuiButton single;
 		this.buttonList.add(new GuiButton(2, this.width / 2 - 100, var4, var2.translateKey("menu.multiplayer")));
-		this.buttonList.add(new GuiButton(3, this.width / 2 - 100, var4 + 24 * 1, var2.translateKey("menu.forkme")));
+		//this.buttonList.add(new GuiButton(3, this.width / 2 - 100, var4 + 24 * 1, var2.translateKey("menu.forkme")));
 		//this.buttonList.add(new GuiButton(3, this.width / 2 - 100, var4 + 24 * 2, var2.translateKey("menu.forkme")));
 		//single.enabled = false;
 
@@ -461,15 +461,15 @@ public class GuiMainMenu extends GuiScreen {
 		 * this.splashText, 0, -8, 16776960); EaglerAdapter.glPopMatrix();
 		 */
 
-		this.drawString(this.fontRenderer, "minecraft 1.5.2", 2, this.height - 20, 16777215);
-		this.drawString(this.fontRenderer, ConfigConstants.mainMenuString + EnumChatFormatting.GRAY + " (cracked)", 2, this.height - 10, 16777215);
+		this.drawString(this.fontRenderer, "Minecraft Version: 1.5.2", 2, this.height - 10, 16777215);
+		//this.drawString(this.fontRenderer, ConfigConstants.mainMenuString + EnumChatFormatting.GRAY, 2, this.height - 10, 16777215);
 
 		//String var10 = "Copyright " + Calendar.getInstance().get(Calendar.YEAR) + " Mojang AB.";
 		String var10 = "copyright 2013 Mojang AB";
 		this.drawString(this.fontRenderer, var10, this.width - this.fontRenderer.getStringWidth(var10) - 2, this.height - 10, 16777215);
 
-		var10 = "site resources are";
-		this.drawString(this.fontRenderer, var10, this.width - this.fontRenderer.getStringWidth(var10) - 2, this.height - 20, 16777215);
+		//var10 = "site resources are";
+		//this.drawString(this.fontRenderer, var10, this.width - this.fontRenderer.getStringWidth(var10) - 2, this.height - 20, 16777215);
 
 		if (this.field_92025_p != null && this.field_92025_p.length() > 0) {
 			drawRect(this.field_92022_t - 2, this.field_92021_u - 2, this.field_92020_v + 2, this.field_92019_w - 1, 1428160512);
@@ -478,20 +478,7 @@ public class GuiMainMenu extends GuiScreen {
 			// this.field_92024_r) / 2, ((GuiButton)this.buttonList.get(0)).yPosition - 12,
 			// 16777215);
 		}
-		/*
-		String lid = "(login is disabled, this copy violates Mojang's terms of service)";
-		int sl = this.fontRenderer.getStringWidth(lid);
-
-		EaglerAdapter.glPushMatrix();
-		float k = ((this.width - sl) * 3 / 4) < 80 ? 0.5f : 0.75f;
-		EaglerAdapter.glScalef(k, k, k);
-		EaglerAdapter.glEnable(EaglerAdapter.GL_BLEND);
-		EaglerAdapter.glBlendFunc(EaglerAdapter.GL_SRC_ALPHA, EaglerAdapter.GL_ONE_MINUS_SRC_ALPHA);
-		this.drawString(fontRenderer, lid, (int)(this.width / k - sl) / 2, (int)((this.height - 19) / k), 0x88999999);
-		EaglerAdapter.glDisable(EaglerAdapter.GL_BLEND);
-		EaglerAdapter.glPopMatrix();
-		*/
-		var10 = "eaglercraft readme.txt";
+		var10 = "Eaglercraft Credits";
 		int w = this.fontRenderer.getStringWidth(var10) * 3 / 4;
 		if(!showAck && par1 >= (this.width - w - 4) && par1 <= this.width && par2 >= 0 && par2 <= 9) {
 			drawRect((this.width - w - 4), 0, this.width, 9, 0x55000099);
@@ -503,20 +490,6 @@ public class GuiMainMenu extends GuiScreen {
 		EaglerAdapter.glScalef(0.75f, 0.75f, 0.75f);
 		this.drawString(this.fontRenderer, var10, 0, 0, 16777215);
 		EaglerAdapter.glPopMatrix();
-		/*
-		var10 = "debug console";
-		w = this.fontRenderer.getStringWidth(var10) * 3 / 4;
-		if(!showAck && par1 >= 0 && par1 <= (w + 4) && par2 >= 0 && par2 <= 9) {
-			drawRect(0, 0, w + 4, 9, 0x55000099);
-		}else {
-			drawRect(0, 0, w + 4, 9, 0x55200000);
-		}
-		EaglerAdapter.glPushMatrix();
-		EaglerAdapter.glTranslatef(2.0f, 1.0f, 0.0f);
-		EaglerAdapter.glScalef(0.75f, 0.75f, 0.75f);
-		this.drawString(this.fontRenderer, var10, 0, 0, 16777215);
-		EaglerAdapter.glPopMatrix();
-		*/
 		
 		if(ConfigConstants.mainMenuItem > 0 && ConfigConstants.mainMenuItemLink != null) {
 			//drawRect((this.width - w - 4), 0, this.width, 9, 0x55200000);
